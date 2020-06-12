@@ -8,7 +8,10 @@ Image registration is a digital image processing technique that helps us to alig
 
 ### Generated SLAM Maps
 Estimating the quality of a SLAM algorithm means estimating the accuracy of its results, which can be determined by the map of the mobile platform created while driving. 
-[[/images/GroundTruth.jpg|Ground Truth Map]]
+
+> [[https://github.com/Dhaour9x/Image-Regidtration/blob/master/images/GroundTruth.jpg | Ground Truth Map]]
+[[https://github.com/Dhaour9x/Image-Regidtration/blob/master/images/gmappingSLAM.jpg | Gmapping SLAM Map]]
+[[https://github.com/Dhaour9x/Image-Regidtration/blob/master/images/hectorSLAM.jpg | Hector SLAM Map]]
 
 
 Since the SLAM resulting image for the map does not always have the correct dimensions
@@ -40,5 +43,8 @@ cd Image-Registration
 ### Usage:
 ```
 python imRegister.py --first images/GroundTruth.jpg --second images/gmappingSLAM.png
+
 ```
+
+-------------------------
 @author Riadh Dhaoui
