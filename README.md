@@ -1,4 +1,4 @@
-# Image-Regidtration
+# Image-Registration
 
 Image registration is a digital image processing technique that helps us to align different images of the same scene.
 
@@ -8,10 +8,8 @@ Image registration is a digital image processing technique that helps us to alig
 
 ### Generated SLAM Maps
 Estimating the quality of a SLAM algorithm means estimating the accuracy of its results, which can be determined by the map of the mobile platform created while driving. 
+[[/images/GroundTruth.jpg|Ground Truth Map]]
 
-![Gmapping SLAM Map](images/GroundTruth.jpg)
-![Gmapping SLAM Map](/images/gmappingSLAM.jpg)
-![Hector SLAM Map](/images/hectorSLAM.jpg)
 
 Since the SLAM resulting image for the map does not always have the correct dimensions
 (approximately the same as the Ground Truth Map), the dimensions of the generated SLAM maps must be corrected approximately to the dimensions of the Ground Truth Map by image registration with OpenCV.
