@@ -30,9 +30,9 @@ Now we want to align a certain image to the same angle as a ground truth image. 
  ## The image registration algorithm works as follows:
 * Both images are converted to grayscale.
 * Adjust features from the image to be aligned to the reference image and save the coordinates of the corresponding keypoints. Keypoints are simply the selected few points used to calculate the transformation (generally points that stand out), and descriptors are histograms of image gradients to characterize the appearance of a keypoint. In this algorithm we use the ORB (Oriented FAST and Rotated BRIEF) implementation in the OpenCV library, which provides us with both the keypoints and the associated descriptors
-* Wählen Sie die besten Übereinstimmungen aus, und entfernen Sie die verrauschten Übereinstimmungen.
-* Finden Sie die Homomorphie-Transformation.
-* Wenden Sie diese Transformation auf das ursprüngliche, nicht ausgerichtete Bild an, um das Ausgabebild zu erhalten.
+* Select the best matches and remove the noisy matches.
+* Find the homomorphic transformation.
+* Apply this transformation to the original unaligned image to obtain the output image.
 
 ### Installation:
 ```
