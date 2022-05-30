@@ -14,20 +14,20 @@ import numpy as np
 
 # construct the argument parse and parse the arguments
 an = argparse.ArgumentParser()
-an.add_argument("-f", "--first", required=True,
-                help="first input image")
-an.add_argument("-s", "--second", required=True,
-                help="second")
-args = vars(an.parse_args())
+#an.add_argument("-f", "--first", required=True,
+               # help="first input image")
+#an.add_argument("-s", "--second", required=True,
+                #help="second")
+#args = vars(an.parse_args())
 
 
 # load the two input images
-img1_color = cv2.imread(args["first"])
-img2_color = cv2.imread(args["second"])
+#img1_color = cv2.imread(args["first"])
+#img2_color = cv2.imread(args["second"])
 
 # Open the image files.
-#img1_color = cv2.imread('gmapping.png')  # Image to be aligned.
-#img2_color = cv2.imread("Ground.jpg")  # Reference image.
+img1_color = cv2.imread('images/gm.jpg')  # Image to be aligned.
+img2_color = cv2.imread("images/gt.jpg")  # Reference image.
 # img2_color = cv2.imread("map5 - targetMAP.jpg") # Reference image.
 
 # Convert to grayscale.
@@ -53,7 +53,7 @@ matcher = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
 matches = matcher.match(d1, d2)
 
 # Sort matches on the basis of their Hamming distance.
-matches.sort(key=lambda x: x.distance)
+#matches.sort(key=lambda x: x.distance)
 
 # Take the top 90 % matches forward.
 matches = matches[:int(len(matches) * 90)]
